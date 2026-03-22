@@ -62,7 +62,7 @@ end
 --------------------------------------------------
 
 local function removeESP(part)
-	local esp = part:FindFirstChild("ESP_OTHER)
+	local esp = part:FindFirstChild("ESP_OTHER")
 	if esp then esp:Destroy() end
 end
 
