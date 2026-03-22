@@ -6,7 +6,7 @@ if getgenv().ESP_OTHER_ITEMS then
 
 	-- 🧹 borrar todos los ESP
 	for _,v in pairs(workspace:GetDescendants()) do
-		if v.Name == "ESP_BOX" then
+		if v.Name == "ESP_OTHER" then
 			v:Destroy()
 		end
 	end
@@ -62,7 +62,7 @@ end
 --------------------------------------------------
 
 local function removeESP(part)
-	local esp = part:FindFirstChild("ESP_BOX")
+	local esp = part:FindFirstChild("ESP_OTHER)
 	if esp then esp:Destroy() end
 end
 
@@ -75,10 +75,10 @@ local function createESP(tool)
 	local handle = tool:FindFirstChild("Handle")
 	if not handle or not handle:IsA("BasePart") then return end
 
-	if handle:FindFirstChild("ESP_BOX") then return end
+	if handle:FindFirstChild("ESP_OTHER") then return end
 
 	local box = Instance.new("BoxHandleAdornment")
-	box.Name = "ESP_BOX"
+	box.Name = "ESP_OTHER"
 	box.Adornee = handle
 	box.AlwaysOnTop = true
 	box.Size = handle.Size
